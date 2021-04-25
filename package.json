@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mhdatallah/time-machine/issues"
   },
-  "homepage": "https://github.com/mhdatallah/time-machine#readme"
+  "homepage": "https://github.com/mhdatallah/time-machine#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
