@@ -4,7 +4,12 @@ const app = express();
 const port = process.env.PORT;
 
 app.get('/now', (req, res) => {
-  msg = new Date().toUTCString()
+  timeZone = req.query.tz;
+  if (timeZone) {
+    msg = new Date().toLocaleString('en-US', { timeZone: timeZone });
+  } else {
+    msg = new Date().toLocaleString('en-US', { timeZone: 'GMT' });
+  }
   res.status(200).send(msg);
 })
 
